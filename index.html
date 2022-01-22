@@ -27,7 +27,6 @@
       bottom: -60vh;
       left: -60%;
       right: -60%;
-      white-space: wrap;
     }
 
     /* .rotation div:nth-child(odd){
@@ -37,7 +36,10 @@
     .rotation div {
       animation: animate 80s linear infinite;
       animation-delay: -40s;
-      white-space: nowrap;
+      position: relative;
+      z-index: 30;
+      display: flex;
+      flex-wrap: nowrap;
     }
 
     .rotation div:nth-child(2n) {
@@ -80,7 +82,8 @@
       transition: 0s;
       color: #FF6600;
       /* text-shadow: 0 0 120px orangered; */
-      filter: drop-shadow(0 0 0.75rem #FF6600)
+      filter: drop-shadow(0 0 0.75rem #FF6600);
+   
     }
 
     i::after {
@@ -128,10 +131,10 @@
     <div class="rotation absolute z-0" id="bishes"></div>
 
     <!-- USE FOR MAIN PAGE -->
-    <div class="relative z-10 bg-transparent">
+    <div class="">
       <section id="header"
         class="relative bg-black/40  p-4 shadow-lg text-white text-justify flex flex-col lg:flex-row">
-        <div class="james mx-auto">
+        <div class="james mx-auto relative z-10">
           <img src="assets/images/WhiteOutYellowLogoMark.webp" alt="OTK" class="w-full" />
           <h1 class="text-4xl font-extrabold tracking-wide text-center py-4">WE'RE LOOKING FOR PARTNERS</h1>
           <p class="pb-4">OTK is breaking into the gaming and livestream space in a huge way. If you're a brand that
@@ -141,10 +144,11 @@
             soon!
           </p>
         </div>
-        <img src="assets/images/Untitled-2.webp" alt="okt-team" class="w-full max-w-prose m-auto" />
+        <img src="assets/images/Untitled-2.webp" alt="okt-team" class="w-full max-w-prose m-auto relative z-10" />
       </section>
-      <section class="flex justify-center flex-wrap mx-auto">
-        <form class=" max-w-prose flex flex-col">
+      <section class="flex justify-center flex-wrap max-w-fit mx-auto mt-4">
+        
+        <form class="mx-auto max-w-prose flex flex-col relative z-10">
           <div class="flex gap-3 py-2">
             <label class="flex flex-col flex-1">Name
               <input type='text' required class="bg-transparent border-b-2 border-solid border-orange-400"/>
@@ -169,9 +173,12 @@
           </label>
 
         </form>
-        <div>
+                <!-- ICONS CONTAINER + ONE TRUE KING -->
+
+        <div class="relative z-10">
+                  <!-- ICONS CONTAINER + ONE TRUE KING -->
+
         </div>
-        <!-- ICONS CONTAINER + ONE TRUE KING -->
       </section>
     </div>
   </div>
@@ -232,12 +239,148 @@
           <i class="fa-regular fa-heart"></i>
           <i class="fa-solid fa-dungeon"></i>
           <i class="fa-solid fa-shield"></i>
+          <i class="fa-solid fa-anchor"></i>
+          <i class="fa-brands fa-android"></i>
+          <i class="fa-solid fa-asterisk"></i>
+          <i class="fa-solid fa-bahai"></i>
+          <i class="fa-brands fa-battle-net"></i>
+          <i class="fa-solid fa-biohazard"></i>
+          <i class="fa-solid fa-bomb"></i>
+          <i class="fa-solid fa-book-skull"></i>
+          <i class="fa-solid fa-broom-ball"></i>
+          <i class="fa-solid fa-bullseye"></i>
+          <i class="fa-solid fa-broom"></i>
+          <i class="fa-regular fa-chess-bishop"></i>
+          <i class="fa-solid fa-chess-knight"></i>
+          <i class="fa-solid fa-chess-rook"></i>
+          <i class="fa-solid fa-crown"></i>
+          <i class="fa-brands fa-d-and-d"></i>
+          <i class="fa-solid fa-crow"></i>
+          <i class="fa-solid fa-dharmachakra"></i>
+          <i class="fa-brands fa-discord"></i>
+          <i class="fa-solid fa-dice-d20"></i>
+          <i class="fa-solid fa-dragon"></i>
+          <i class="fa-brands fa-fort-awesome"></i>
+          <i class="fa-brands fa-galactic-senate"></i>
+          <i class="fa-solid fa-gavel"></i>
+          <i class="fa-brands fa-freebsd"></i>
+          <i class="fa-solid fa-gamepad"></i>
+          <i class="fa-regular fa-gem"></i>
+          <i class="fa-solid fa-ghost"></i>
+          <i class="fa-brands fa-grunt"></i>
+          <i class="fa-brands fa-hotjar"></i>
+          <i class="fa-solid fa-jet-fighter"></i>
+          <i class="fa-solid fa-meteor"></i>
+          <i class="fa-brands fa-steam-symbol"></i>
+          <i class="fa-brands fa-twitch"></i>
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <i class="fa-solid fa-wind"></i>
+          <i class="fa-solid fa-yin-yang"></i>
+          <i class="fa-solid fa-atom"></i>
+          <i class="fa-solid fa-book-skull"></i>
+          <i class="fa-solid fa-hat-wizard"></i>
+          <i class="fa-solid fa-scroll"></i>
+          <i class="fa-solid fa-skull-crossbones"></i>
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-dungeon"></i>
+          <i class="fa-solid fa-shield"></i>
+          <i class="fa-solid fa-anchor"></i>
+          <i class="fa-brands fa-android"></i>
+          <i class="fa-solid fa-asterisk"></i>
+          <i class="fa-solid fa-bahai"></i>
+          <i class="fa-brands fa-battle-net"></i>
+          <i class="fa-solid fa-biohazard"></i>
+          <i class="fa-solid fa-bomb"></i>
+          <i class="fa-solid fa-book-skull"></i>
+          <i class="fa-solid fa-broom-ball"></i>
+          <i class="fa-solid fa-bullseye"></i>
+          <i class="fa-solid fa-broom"></i>
+          <i class="fa-regular fa-chess-bishop"></i>
+          <i class="fa-solid fa-chess-knight"></i>
+          <i class="fa-solid fa-chess-rook"></i>
+          <i class="fa-solid fa-crown"></i>
+          <i class="fa-brands fa-d-and-d"></i>
+          <i class="fa-solid fa-crow"></i>
+          <i class="fa-solid fa-dharmachakra"></i>
+          <i class="fa-brands fa-discord"></i>
+          <i class="fa-solid fa-dice-d20"></i>
+          <i class="fa-solid fa-dragon"></i>
+          <i class="fa-brands fa-fort-awesome"></i>
+          <i class="fa-brands fa-galactic-senate"></i>
+          <i class="fa-solid fa-gavel"></i>
+          <i class="fa-brands fa-freebsd"></i>
+          <i class="fa-solid fa-gamepad"></i>
+          <i class="fa-regular fa-gem"></i>
+          <i class="fa-solid fa-ghost"></i>
+          <i class="fa-brands fa-grunt"></i>
+          <i class="fa-brands fa-hotjar"></i>
+          <i class="fa-solid fa-jet-fighter"></i>
+          <i class="fa-solid fa-meteor"></i>
+          <i class="fa-brands fa-steam-symbol"></i>
+          <i class="fa-brands fa-twitch"></i>
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <i class="fa-solid fa-wind"></i>
+          <i class="fa-solid fa-yin-yang"></i>
+          <i class="fa-solid fa-atom"></i>
+          <i class="fa-solid fa-book-skull"></i>
+          <i class="fa-solid fa-hat-wizard"></i>
+          <i class="fa-solid fa-scroll"></i>
+          <i class="fa-solid fa-skull-crossbones"></i>
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-dungeon"></i>
+          <i class="fa-solid fa-shield"></i>
+          <i class="fa-solid fa-shield"></i>
+          <i class="fa-solid fa-anchor"></i>
+          <i class="fa-brands fa-android"></i>
+          <i class="fa-solid fa-asterisk"></i>
+          <i class="fa-solid fa-bahai"></i>
+          <i class="fa-brands fa-battle-net"></i>
+          <i class="fa-solid fa-biohazard"></i>
+          <i class="fa-solid fa-bomb"></i>
+          <i class="fa-solid fa-book-skull"></i>
+          <i class="fa-solid fa-broom-ball"></i>
+          <i class="fa-solid fa-bullseye"></i>
+          <i class="fa-solid fa-broom"></i>
+          <i class="fa-regular fa-chess-bishop"></i>
+          <i class="fa-solid fa-chess-knight"></i>
+          <i class="fa-solid fa-chess-rook"></i>
+          <i class="fa-solid fa-crown"></i>
+          <i class="fa-brands fa-d-and-d"></i>
+          <i class="fa-solid fa-crow"></i>
+          <i class="fa-solid fa-dharmachakra"></i>
+          <i class="fa-brands fa-discord"></i>
+          <i class="fa-solid fa-dice-d20"></i>
+          <i class="fa-solid fa-dragon"></i>
+          <i class="fa-brands fa-fort-awesome"></i>
+          <i class="fa-brands fa-galactic-senate"></i>
+          <i class="fa-solid fa-gavel"></i>
+          <i class="fa-brands fa-freebsd"></i>
+          <i class="fa-solid fa-gamepad"></i>
+          <i class="fa-regular fa-gem"></i>
+          <i class="fa-solid fa-ghost"></i>
+          <i class="fa-brands fa-grunt"></i>
+          <i class="fa-brands fa-hotjar"></i>
+          <i class="fa-solid fa-jet-fighter"></i>
+          <i class="fa-solid fa-meteor"></i>
+          <i class="fa-brands fa-steam-symbol"></i>
+          <i class="fa-brands fa-twitch"></i>
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <i class="fa-solid fa-wind"></i>
+          <i class="fa-solid fa-yin-yang"></i>
+          <i class="fa-solid fa-atom"></i>
+          <i class="fa-solid fa-book-skull"></i>
+          <i class="fa-solid fa-hat-wizard"></i>
+          <i class="fa-solid fa-scroll"></i>
+          <i class="fa-solid fa-skull-crossbones"></i>
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-dungeon"></i>
+          <i class="fa-solid fa-shield"></i>
           </div>
         `
       }
       bg.innerHTML = bgIcons
     }
-    start(90)
+    start(50)
 
   </script>
 </body>
