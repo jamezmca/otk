@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>One True King</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .rotation {
+      transform: rotate(-30deg);
+      background: hsl(230, 90%, 7%);
+      top: -80vh;
+      bottom: -60vh;
+      left: -60%;
+      right: -60%;
+      white-space: wrap;
+    }
+
+    /* .rotation div:nth-child(odd){
+      background: green;
+    } */
+
+    .rotation div {
+      animation: animate 80s linear infinite;
+      animation-delay: -40s;
+      white-space: nowrap;
+    }
+
+    .rotation div:nth-child(2n) {
+      animation: animate1 120s linear infinite;
+      animation-delay: -50s;
+
+    }
+
+    @keyframes animate {
+      0% {
+        transform: translateX(50%);
+      }
+
+      100% {
+        transform: translateX(-50%)
+      }
+    }
+
+    @keyframes animate1 {
+      0% {
+        transform: translateX(-50%);
+      }
+
+      100% {
+        transform: translateX(50%)
+      }
+    }
+
+    i {
+      color: hsl(230, 100%, 12%);
+      transition: all 1s linear;
+      font-size: 2.2rem;
+      padding: 5px;
+      user-select: none;
+      cursor: default;
+      position: relative;
+    }
+
+    i:hover {
+      transition: 0s;
+      color: #FF6600;
+      /* text-shadow: 0 0 120px orangered; */
+      filter: drop-shadow(0 0 0.75rem #FF6600)
+    }
+
+    i::after {
+      position: absolute;
+      content: '';
+      inset: 5px;
+      border-radius: 50%;
+      background: crimson;
+      filter: blur(20px);
+      opacity: 0;
+      transition: opacity 1s linear;
+    }
+
+    i:hover::after {
+      transition: 0s;
+      opacity: 0.7;
+    }
+
+    .james {
+      width: min(600px, 90vw);
+      display: flex;
+      flex-direction: column;
+      text-align: justify;
+    }
+
+    #header {
+      max-width: 1400px;
+      margin: 0 auto;
+      margin-top: 50px;
+    }
+
+    form label {
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.8em;
+      color: orange;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="app" class="min-h-screen overflow-hidden relative">
+    <!-- USE FOR BACKGROUND -->
+    <div class="rotation absolute z-0" id="bishes"></div>
+
+    <!-- USE FOR MAIN PAGE -->
+    <div class="relative z-10 bg-transparent">
+      <section id="header"
+        class="relative bg-black/40  p-4 shadow-lg text-white text-justify flex flex-col lg:flex-row">
+        <div class="james mx-auto">
+          <img src="assets/images/WhiteOutYellowLogoMark.webp" alt="OTK" class="w-full" />
+          <h1 class="text-4xl font-extrabold tracking-wide text-center py-4">WE'RE LOOKING FOR PARTNERS</h1>
+          <p class="pb-4">OTK is breaking into the gaming and livestream space in a huge way. If you're a brand that
+            wants to be on
+            the
+            ground floor of the next generation of entertainment, leave us a message below and we'll get back to you
+            soon!
+          </p>
+        </div>
+        <img src="assets/images/Untitled-2.webp" alt="okt-team" class="w-full max-w-prose m-auto" />
+      </section>
+      <section class="flex justify-center flex-wrap mx-auto">
+        <form class=" max-w-prose flex flex-col">
+          <div class="flex gap-3 py-2">
+            <label class="flex flex-col flex-1">Name
+              <input type='text' required class="bg-transparent border-b-2 border-solid border-orange-400"/>
+            </label>
+            <label class="flex flex-col flex-1">Name
+              <input type='text' required class="bg-transparent border-b-2 border-solid border-orange-400"/>
+            </label>
+          </div>
+          <div class="flex gap-3 py-2">
+            <label class="flex flex-col flex-1">Name
+              <input type='text' required class="bg-transparent border-b-2 border-solid border-orange-400"/>
+          </label>
+          <label class="flex flex-col flex-1">Name
+            <input type='text' required class="bg-transparent border-b-2 border-solid border-orange-400"/>
+          </label>
+        </div>
+        <label class="flex flex-col flex-1">Name
+          <input type='text' required class="bg-transparent border-b-2 border-solid border-orange-400"/>
+        </label>
+          <label class="flex flex-col flex-1">Name
+            <textarea type='text' required class="w-full bg-transparent border-b-2 border-solid border-orange-400"></textarea>
+          </label>
+
+        </form>
+        <div>
+        </div>
+        <!-- ICONS CONTAINER + ONE TRUE KING -->
+      </section>
+    </div>
+  </div>
+
+
+
+  <!-- <script type="module" src="/main.js"></script> -->
+  <!-- //////////////////////////// SCRIPT ////////////////////////////////// -->
+  <script type="text/javascript" defer>
+    function start(num) {
+      let bg = document.getElementById('bishes')
+      let bgIcons = ''
+      for (let i = 0; i < num; i++) {
+        bgIcons += `
+        <div>
+          <i class="fa-solid fa-anchor"></i>
+          <i class="fa-brands fa-android"></i>
+          <i class="fa-solid fa-asterisk"></i>
+          <i class="fa-solid fa-bahai"></i>
+          <i class="fa-brands fa-battle-net"></i>
+          <i class="fa-solid fa-biohazard"></i>
+          <i class="fa-solid fa-bomb"></i>
+          <i class="fa-solid fa-book-skull"></i>
+          <i class="fa-solid fa-broom-ball"></i>
+          <i class="fa-solid fa-bullseye"></i>
+          <i class="fa-solid fa-broom"></i>
+          <i class="fa-regular fa-chess-bishop"></i>
+          <i class="fa-solid fa-chess-knight"></i>
+          <i class="fa-solid fa-chess-rook"></i>
+          <i class="fa-solid fa-crown"></i>
+          <i class="fa-brands fa-d-and-d"></i>
+          <i class="fa-solid fa-crow"></i>
+          <i class="fa-solid fa-dharmachakra"></i>
+          <i class="fa-brands fa-discord"></i>
+          <i class="fa-solid fa-dice-d20"></i>
+          <i class="fa-solid fa-dragon"></i>
+          <i class="fa-brands fa-fort-awesome"></i>
+          <i class="fa-brands fa-galactic-senate"></i>
+          <i class="fa-solid fa-gavel"></i>
+          <i class="fa-brands fa-freebsd"></i>
+          <i class="fa-solid fa-gamepad"></i>
+          <i class="fa-regular fa-gem"></i>
+          <i class="fa-solid fa-ghost"></i>
+          <i class="fa-brands fa-grunt"></i>
+          <i class="fa-brands fa-hotjar"></i>
+          <i class="fa-solid fa-jet-fighter"></i>
+          <i class="fa-solid fa-meteor"></i>
+          <i class="fa-brands fa-steam-symbol"></i>
+          <i class="fa-brands fa-twitch"></i>
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <i class="fa-solid fa-wind"></i>
+          <i class="fa-solid fa-yin-yang"></i>
+          <i class="fa-solid fa-atom"></i>
+          <i class="fa-solid fa-book-skull"></i>
+          <i class="fa-solid fa-hat-wizard"></i>
+          <i class="fa-solid fa-scroll"></i>
+          <i class="fa-solid fa-skull-crossbones"></i>
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-dungeon"></i>
+          <i class="fa-solid fa-shield"></i>
+          </div>
+        `
+      }
+      bg.innerHTML = bgIcons
+    }
+    start(90)
+
+  </script>
+</body>
+
+</html>
