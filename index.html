@@ -25,8 +25,14 @@
       background: hsl(230, 90%, 7%);
       top: -80vh;
       bottom: -60vh;
-      left: -60%;
-      right: -60%;
+      left: -70%;
+      right: -70%;
+    }
+
+    @media (max-width: 600px) {
+      .rotation {
+        left: -100vw;
+      }
     }
 
     /* .rotation div:nth-child(odd){
@@ -52,6 +58,7 @@
       0% {
         transform: translateX(25%);
       }
+
       50% {
         transform: translateX(-25%);
       }
@@ -65,6 +72,7 @@
       0% {
         transform: translateX(-25%);
       }
+
       50% {
         transform: translateX(25%);
       }
@@ -89,7 +97,7 @@
       color: #FF6600;
       /* text-shadow: 0 0 120px orangered; */
       filter: drop-shadow(0 0 0.75rem #FF6600);
-   
+
     }
 
     i::after {
@@ -121,11 +129,44 @@
       margin-top: 50px;
     }
 
-    form label {
+    form {
       font-weight: bold;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 0.8em;
       color: orange;
+      width: min(100vw, 400px);
+      padding: 0 14px;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    #rando > div:first-child {
+      border-bottom: 14px solid orange;
+    }
+
+
+    #rando div:nth-child(2) div {
+      color: white;
+      display: flex;
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    #rando h1 {
+      padding: 0 7px;
+    }
+
+    #icons i {
+      color: white;
+      cursor: pointer;
+      font-size: 4em;
+      margin: 0 4px;
+    }
+
+    #icons i:hover {
+      color: hsl(20, 100%, 60%);
     }
   </style>
 
@@ -152,37 +193,72 @@
         </div>
         <img src="assets/images/Untitled-2.webp" alt="okt-team" class="w-full max-w-prose m-auto relative z-10" />
       </section>
-      <section class="flex justify-center flex-wrap max-w-fit mx-auto mt-4">
-        
-        <form class="mx-auto max-w-prose flex flex-col relative z-10">
+      <section class="flex justify-center flex-wrap gap-10 max-w-fit mx-auto mt-4">
+
+        <form autocomplete="off" class="mx-auto flex flex-col relative z-10">
+          <div class="flex flex-col">
+            <h1 class="text-base">What is your interest?</h1>
+            <div class="flex justify-between py-1">
+
+              <label>
+                <input type="radio"> Press Interest
+              </label>
+              <label>
+                <input type="radio"> Partner Interest
+              </label>
+            </div>
+          </div>
           <div class="flex gap-3 py-2">
-            <label class="flex flex-col flex-1">Name
-              <input type='text' required class="bg-transparent border-b-2 border-solid border-orange-400"/>
+            <label class="flex flex-col flex-1">Name:
+              <input type='text' required
+                class="bg-transparent border-b-4 border-solid border-orange-400 hover:border-white focus:border-white outline-none " />
             </label>
-            <label class="flex flex-col flex-1">Name
-              <input type='text' required class="bg-transparent border-b-2 border-solid border-orange-400"/>
+            <label class="flex flex-col flex-1">Organisation:
+              <input type='text' required
+                class="bg-transparent border-b-4 border-solid border-orange-400 hover:border-white focus:border-white outline-none" />
             </label>
           </div>
           <div class="flex gap-3 py-2">
-            <label class="flex flex-col flex-1">Name
-              <input type='text' required class="bg-transparent border-b-2 border-solid border-orange-400"/>
+            <label class="flex flex-col flex-1">Website:
+              <input type='text' required
+                class="bg-transparent border-b-4 border-solid border-orange-400 hover:border-white focus:border-white outline-none" />
+            </label>
+            <label class="flex flex-col flex-1">Email:
+              <input type='text' required
+                class="bg-transparent border-b-4 border-solid border-orange-400 hover:border-white focus:border-white outline-none" />
+            </label>
+          </div>
+          <label class="flex flex-col flex-1">Phone Number (optional):
+            <input type='text'
+              class="bg-transparent border-b-4 border-solid border-orange-400 hover:border-white focus:border-white outline-none" />
           </label>
-          <label class="flex flex-col flex-1">Name
-            <input type='text' required class="bg-transparent border-b-2 border-solid border-orange-400"/>
+          <label class="flex flex-col flex-1">Message
+            <textarea type='text'
+              class="w-full bg-transparent border-b-4 border-solid border-orange-400 hover:border-white focus:border-white outline-none"></textarea>
           </label>
-        </div>
-        <label class="flex flex-col flex-1">Name
-          <input type='text' required class="bg-transparent border-b-2 border-solid border-orange-400"/>
-        </label>
-          <label class="flex flex-col flex-1">Name
-            <textarea type='text' required class="w-full bg-transparent border-b-2 border-solid border-orange-400"></textarea>
-          </label>
+          <button class="bg-orange-400 mt-2 p-1 shadow text-white font-bold hover:transition-opacity hover:opacity-60"
+            type="submit">SUBMIT</button>
 
         </form>
-                <!-- ICONS CONTAINER + ONE TRUE KING -->
 
-        <div class="relative z-10">
-                  <!-- ICONS CONTAINER + ONE TRUE KING -->
+        <div id="rando" class="grid place-items-center">
+          <div id="icons" class=" relative z-10 text-white flex justify-between">
+            <i class="fa-brands fa-twitter-square"></i>
+            <i class="fa-brands fa-twitch"></i>
+            <i class="fa-brands fa-youtube-square"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+          <!-- ICONS CONTAINER + ONE TRUE KING -->
+          
+          <div class="relative z-10 p-3">
+            <div>
+              <h1>ONE.</h1>
+              <h1>TRUE.</h1>
+              <h1>KING.</h1>
+            </div>
+            <p class="text-center text-white text-2xl font-light tracking-wide">Full Website Coming Soon!</p>
+            <img src="assets/images/Paint Splatter 1.webp" alt="bg-splatter" class="absolute inset-0" />
+          </div>
 
         </div>
       </section>
@@ -194,6 +270,10 @@
   <!-- <script type="module" src="/main.js"></script> -->
   <!-- //////////////////////////// SCRIPT ////////////////////////////////// -->
   <script type="text/javascript" defer>
+    let tagArr = document.getElementsByTagName("input");
+    for (let i = 0; i < tagArr.length; i++) {
+      tagArr[i].autocomplete = 'off';
+    }
     function start(num) {
       let bg = document.getElementById('bishes')
       let bgIcons = ''
